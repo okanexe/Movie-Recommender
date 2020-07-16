@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+
+
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-outline-info mb-4" type="submit"> suggestions for you </button>
+    </form>
+
+    <div>
+        {% for movie in filename %}
+            {{ movie }}<br/>
+        {% endfor %}
+    </div>
+
+
+
+{% endblock content %}
+

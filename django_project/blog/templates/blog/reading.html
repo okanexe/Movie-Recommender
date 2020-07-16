@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="urls"><br/>
+        <br/><button class="btn btn-outline-info mb-4" type="submit">GO ! </button>
+        <small>paste link and GO !</small>
+    </form>
+
+{#    <div name="liste" id="liste">#}
+        {% for movie in listem %}
+            {{ movie }}<br/>
+        {% endfor %}
+{#        {{ listem }}#}
+{#    </div>#}
+
+{#    <form method="post">#}
+{#        {% csrf_token %}#}
+{#        <input type="text" name="sending" value="{{ listem }}" size="150">#}
+{#        <button type="submit">sisteme yükle </button>#}
+{#        <a class="btn btn-outline-info mb-4" href="{% url 'blog-about' %}">sisteme yükle</a>#}
+{#        <small>kelimeleri kopyala ve Add Data sekmesinde movieData kısmına ekle</small>#}
+{#    </form>#}
+
+
+{% endblock %}
